@@ -24,7 +24,7 @@ class PokemonType{
         return 0.0
     }
     func addPokemon(pokemon:Pokemon) {
-        
+        pokemons["pokemon.name"] = pokemon
     }
     
 }

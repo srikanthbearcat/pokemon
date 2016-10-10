@@ -24,21 +24,21 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return PokemonFactory.pokemonTypes[section].pokemons.count
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return PokemonFactory.pokemonTypes.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell!
         cell = tableView.dequeueReusableCellWithIdentifier("pokemon", forIndexPath: indexPath)
-  //     let imageIV:UIImageView = cell.viewWithTag(IMAGE_TAG) as! UIImageView
+        let imageIV:UIImageView = cell.viewWithTag(IMAGE_TAG) as! UIImageView
         let nameLBL:UILabel = cell.viewWithTag(NAME_TAG) as! UILabel
         let rateLBL:UILabel = cell.viewWithTag(RATE_TAG) as! UILabel
         
         var displayOrder:[Pokemon] = PokemonFactory.pokemonTypes[indexPath.section].displayOrder()
         let pokemon:Pokemon = displayOrder[indexPath.row]
-     //   imageIV.image = UIImage(named:"\(pokemon.image)")
+        imageIV.image = UIImage(named:"\(pokemon.image)")
         nameLBL.text = pokemon.name
         rateLBL.text = String(pokemon.catchRate)
         return cell

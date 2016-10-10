@@ -15,6 +15,12 @@
 		7E298C551DAAE3070076DC95 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E298C541DAAE3070076DC95 /* Pokemon.swift */; };
 		7E298C571DAAE52A0076DC95 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E298C561DAAE52A0076DC95 /* PokemonType.swift */; };
 		7E298C591DAAEA790076DC95 /* PokemonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E298C581DAAEA790076DC95 /* PokemonFactory.swift */; };
+		7E51DD691DAC086700095174 /* Pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E51DD681DAC086700095174 /* Pikachu.png */; };
+		7E51DD6B1DAC086F00095174 /* Raichu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E51DD6A1DAC086F00095174 /* Raichu.png */; };
+		7E51DD6D1DAC087600095174 /* Magnemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E51DD6C1DAC087600095174 /* Magnemite.png */; };
+		7E51DD6F1DAC0AFB00095174 /* Clefairy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E51DD6E1DAC0AFB00095174 /* Clefairy.png */; };
+		7E51DD711DAC0B0100095174 /* Porygon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E51DD701DAC0B0100095174 /* Porygon.png */; };
+		7E51DD731DAC0B0C00095174 /* Togepi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E51DD721DAC0B0C00095174 /* Togepi.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		7E298C541DAAE3070076DC95 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		7E298C561DAAE52A0076DC95 /* PokemonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 		7E298C581DAAEA790076DC95 /* PokemonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonFactory.swift; sourceTree = "<group>"; };
+		7E51DD681DAC086700095174 /* Pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pikachu.png; sourceTree = "<group>"; };
+		7E51DD6A1DAC086F00095174 /* Raichu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Raichu.png; sourceTree = "<group>"; };
+		7E51DD6C1DAC087600095174 /* Magnemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Magnemite.png; sourceTree = "<group>"; };
+		7E51DD6E1DAC0AFB00095174 /* Clefairy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clefairy.png; sourceTree = "<group>"; };
+		7E51DD701DAC0B0100095174 /* Porygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Porygon.png; sourceTree = "<group>"; };
+		7E51DD721DAC0B0C00095174 /* Togepi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Togepi.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,7 @@
 		7E298C361DAADD120076DC95 = {
 			isa = PBXGroup;
 			children = (
+				7E51DD671DAC085300095174 /* Images */,
 				7E298C411DAADD120076DC95 /* Bandaru_Pokemon */,
 				7E298C401DAADD120076DC95 /* Products */,
 			);
@@ -71,6 +84,19 @@
 				7E298C4E1DAADD120076DC95 /* Info.plist */,
 			);
 			path = Bandaru_Pokemon;
+			sourceTree = "<group>";
+		};
+		7E51DD671DAC085300095174 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7E51DD6A1DAC086F00095174 /* Raichu.png */,
+				7E51DD6C1DAC087600095174 /* Magnemite.png */,
+				7E51DD701DAC0B0100095174 /* Porygon.png */,
+				7E51DD681DAC086700095174 /* Pikachu.png */,
+				7E51DD721DAC0B0C00095174 /* Togepi.png */,
+				7E51DD6E1DAC0AFB00095174 /* Clefairy.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +159,13 @@
 			files = (
 				7E298C4D1DAADD120076DC95 /* LaunchScreen.storyboard in Resources */,
 				7E298C4A1DAADD120076DC95 /* Assets.xcassets in Resources */,
+				7E51DD711DAC0B0100095174 /* Porygon.png in Resources */,
+				7E51DD6D1DAC087600095174 /* Magnemite.png in Resources */,
+				7E51DD691DAC086700095174 /* Pikachu.png in Resources */,
+				7E51DD6B1DAC086F00095174 /* Raichu.png in Resources */,
 				7E298C481DAADD120076DC95 /* Main.storyboard in Resources */,
+				7E51DD6F1DAC0AFB00095174 /* Clefairy.png in Resources */,
+				7E51DD731DAC0B0C00095174 /* Togepi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +330,7 @@
 				7E298C531DAADD120076DC95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
