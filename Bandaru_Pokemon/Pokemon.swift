@@ -8,9 +8,9 @@
 
 import Foundation
 class Pokemon{
-    var name:String = ""
-    var catchRate:Double = 0.0
-    var image:String = ""
+    var name:String
+    var catchRate:Double
+    var image:String
     
     init(name:String,catchRate:Double,image:String){
         self.name = name

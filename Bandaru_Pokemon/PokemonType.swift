@@ -8,7 +8,7 @@
 
 import Foundation
 class PokemonType{
-    var type:String = ""
+    var type:String
     var pokemons = [String:Pokemon]()
     
     init(type:String,pokemons:[String:Pokemon]){
@@ -21,7 +21,7 @@ class PokemonType{
         return unsorted.sort({$0.catchRate>$1.catchRate})
     }
     func getCatchRate(name:String) -> Double {
-        return 0.0
+        return pokemons["name"]!.catchRate
     }
     func addPokemon(pokemon:Pokemon) {
         pokemons["pokemon.name"] = pokemon

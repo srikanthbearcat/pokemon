@@ -9,16 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    let IMAGE_TAG = 0
+    let IMAGE_TAG = 10
     let NAME_TAG = 1
     let RATE_TAG = 2
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         PokemonFactory.createModel()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,9 +32,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell!
         cell = tableView.dequeueReusableCellWithIdentifier("pokemon", forIndexPath: indexPath)
-        let imageIV:UIImageView = cell.viewWithTag(IMAGE_TAG) as! UIImageView
         let nameLBL:UILabel = cell.viewWithTag(NAME_TAG) as! UILabel
         let rateLBL:UILabel = cell.viewWithTag(RATE_TAG) as! UILabel
+        let imageIV:UIImageView = cell.viewWithTag(IMAGE_TAG) as! UIImageView
+
         
         var displayOrder:[Pokemon] = PokemonFactory.pokemonTypes[indexPath.section].displayOrder()
         let pokemon:Pokemon = displayOrder[indexPath.row]
