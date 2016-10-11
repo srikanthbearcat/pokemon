@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//TableViewController for displaying pokemons and their catch rate
 class PokemonTableViewController: UITableViewController {
     let IMAGE_TAG = 10
     let NAME_TAG = 1
@@ -40,7 +40,7 @@ class PokemonTableViewController: UITableViewController {
         return PokemonFactory.pokemonTypes[section].pokemons.count
     }
 
-    
+    //Configures a cell in tableview
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell!
         cell = tableView.dequeueReusableCellWithIdentifier("pokemon", forIndexPath: indexPath)
@@ -56,9 +56,11 @@ class PokemonTableViewController: UITableViewController {
         rateLBL.text = String(pokemon.catchRate)
         return cell
     }
+    //Displays header for a section in table view
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return PokemonFactory.pokemonTypes[section].type
     }
+    //Called when a cell in the table view is selected
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         PokemonFactory.pokemonTypes[indexPath.section].displayOrder()[indexPath.row].catchRate += 1
       self.tableView.reloadData()

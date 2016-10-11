@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//Describes a Pokemon object
 class Pokemon{
     var name:String
     var catchRate:Double
