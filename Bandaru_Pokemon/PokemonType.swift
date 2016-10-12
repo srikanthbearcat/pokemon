@@ -16,7 +16,7 @@ class PokemonType{
         self.type = type
         self.pokemons = pokemons
     }
-    //Display pokemons in descendong order
+    //Display pokemons in descending order
     func displayOrder() -> [Pokemon] {
         let unsorted = Array(pokemons.values)
         return unsorted.sort({$0.catchRate>$1.catchRate})

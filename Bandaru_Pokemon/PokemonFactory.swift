@@ -9,7 +9,7 @@
 import Foundation
 class PokemonFactory {
     static var pokemonTypes:[PokemonType] = []
-    //Creates a pokemon type objects of a type and stores that type object in an array of pokemonsTypes
+    //Creates a pokemon type objects of a type and stores that type object in an array of pokemonsType
     class func createModel() {
         pokemonTypes = [PokemonType(type:"Electric",pokemons: [
             "Pikachu":Pokemon(name:"Pikachu",catchRate:24.8,image:"Pikachu.png"),

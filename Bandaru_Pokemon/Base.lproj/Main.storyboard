@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KTd-hv-4lE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KTd-hv-4lE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Pokemon Table View Controller-->
@@ -12,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="79" sectionHeaderHeight="18" sectionFooterHeight="18" id="Dqe-jy-soQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokemon" rowHeight="79" id="I1N-zq-rl5">
                                 <rect key="frame" x="0.0" y="50" width="600" height="79"/>
@@ -23,34 +25,75 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LNK-xt-rsp">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="8" y="8" width="84" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="84" id="5QZ-Kd-q72"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="5QZ-Kd-q72"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="5QZ-Kd-q72"/>
+                                                </mask>
                                             </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMO-w5-26n">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="73" id="qUr-wJ-Xu1"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="314" y="8" width="73" height="66"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="qUr-wJ-Xu1"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="qUr-wJ-Xu1"/>
+                                                </mask>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptj-vt-mgy">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="126" y="8" width="175" height="66"/>
-                                            </variation>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ptj-vt-mgy" firstAttribute="firstBaseline" secondItem="KMO-w5-26n" secondAttribute="firstBaseline" id="8iq-d0-7z1"/>
+                                        <constraint firstItem="LNK-xt-rsp" firstAttribute="top" secondItem="PLu-Jf-T5P" secondAttribute="topMargin" id="MhA-Cm-qxJ"/>
+                                        <constraint firstItem="ptj-vt-mgy" firstAttribute="baseline" secondItem="KMO-w5-26n" secondAttribute="baseline" id="PtN-3A-FuE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="LNK-xt-rsp" secondAttribute="bottom" constant="-4" id="Qhm-11-1Zd"/>
+                                        <constraint firstItem="LNK-xt-rsp" firstAttribute="bottom" secondItem="ptj-vt-mgy" secondAttribute="bottom" id="Wzt-TJ-70K"/>
+                                        <constraint firstItem="ptj-vt-mgy" firstAttribute="leading" secondItem="LNK-xt-rsp" secondAttribute="trailing" constant="34" id="ZXw-49-MKB"/>
+                                        <constraint firstItem="KMO-w5-26n" firstAttribute="leading" secondItem="ptj-vt-mgy" secondAttribute="trailing" constant="13" id="b4r-EW-mDe"/>
+                                        <constraint firstItem="LNK-xt-rsp" firstAttribute="leading" secondItem="PLu-Jf-T5P" secondAttribute="leadingMargin" id="cei-hI-axr"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KMO-w5-26n" secondAttribute="trailing" constant="5" id="cl7-Tf-lUF"/>
+                                        <constraint firstItem="LNK-xt-rsp" firstAttribute="top" secondItem="ptj-vt-mgy" secondAttribute="top" id="gkK-3P-To3"/>
+                                    </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="LNK-xt-rsp"/>
                                             <exclude reference="KMO-w5-26n"/>
                                             <exclude reference="ptj-vt-mgy"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="MhA-Cm-qxJ"/>
+                                            <exclude reference="Qhm-11-1Zd"/>
+                                            <exclude reference="Wzt-TJ-70K"/>
+                                            <exclude reference="cei-hI-axr"/>
+                                            <exclude reference="gkK-3P-To3"/>
+                                            <exclude reference="8iq-d0-7z1"/>
+                                            <exclude reference="PtN-3A-FuE"/>
+                                            <exclude reference="ZXw-49-MKB"/>
+                                            <exclude reference="b4r-EW-mDe"/>
+                                            <exclude reference="cl7-Tf-lUF"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -58,6 +101,18 @@
                                             <include reference="LNK-xt-rsp"/>
                                             <include reference="KMO-w5-26n"/>
                                             <include reference="ptj-vt-mgy"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="MhA-Cm-qxJ"/>
+                                            <include reference="Qhm-11-1Zd"/>
+                                            <include reference="Wzt-TJ-70K"/>
+                                            <include reference="cei-hI-axr"/>
+                                            <include reference="gkK-3P-To3"/>
+                                            <include reference="8iq-d0-7z1"/>
+                                            <include reference="PtN-3A-FuE"/>
+                                            <include reference="ZXw-49-MKB"/>
+                                            <include reference="b4r-EW-mDe"/>
+                                            <include reference="cl7-Tf-lUF"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
